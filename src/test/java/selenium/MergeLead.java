@@ -95,7 +95,12 @@ public class MergeLead {
 		driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
 		
 		// Verify error msg
+		Thread.sleep(2000);
+		String text = driver.findElement(By.xpath("//div[contains(text(),'No records')]")).getText();
+		System.out.println("There was no record to display: " + text.equals("No records to display"));
+		
 		// Close the browser (Do not log out)
+		driver.close();
 		
 	}
 
