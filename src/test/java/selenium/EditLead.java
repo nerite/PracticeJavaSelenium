@@ -41,7 +41,6 @@ public class EditLead {
 		
 		// Click on First Resulting lead
 		Thread.sleep(2000);
-		//String txt = driver.findElement(By.xpath("(//div[@class='x-grid3-cell-inner x-grid3-col-companyName'])[1]/a")).getText();
 		driver.findElement(By.xpath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId'])[1]/a")).click();
 		
 		// Verify the title of the page
