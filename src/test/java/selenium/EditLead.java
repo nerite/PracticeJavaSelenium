@@ -41,7 +41,7 @@ public class EditLead {
 		
 		// Click on First Resulting lead
 		Thread.sleep(2000);
-		String txt = driver.findElement(By.xpath("(//div[@class='x-grid3-cell-inner x-grid3-col-companyName'])[1]/a")).getText();
+		//String txt = driver.findElement(By.xpath("(//div[@class='x-grid3-cell-inner x-grid3-col-companyName'])[1]/a")).getText();
 		driver.findElement(By.xpath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId'])[1]/a")).click();
 		
 		// Verify the title of the page
@@ -52,6 +52,7 @@ public class EditLead {
 		driver.findElement(By.xpath("//a[text()='Edit']")).click();
 		
 		// Change the Company name
+		String oldT = driver.findElement(By.xpath("//input[contains(@id,'companyN')]")).getAttribute("value");
 		driver.findElement(By.xpath("//input[contains(@id,'companyN')]")).clear();
 		driver.findElement(By.xpath("//input[contains(@id,'companyN')]")).sendKeys(RandomStringUtils.randomAlphabetic(5));
 							
@@ -60,7 +61,7 @@ public class EditLead {
 		
 		// Confirm the Changed name appears
 		String text = driver.findElement(By.xpath("//span[@id='viewLead_companyName_sp']")).getText();
-		System.out.println("The Company name has bean changed: " + !text.equals(txt));
+		System.out.println("The Company name has bean changed from \"" + oldT + "\" to \"" + text+ " \"");
 		
 		// Close the browser (Do not log out)
 		driver.close();
