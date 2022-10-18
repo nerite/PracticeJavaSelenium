@@ -32,10 +32,10 @@ public class DataTypes {
 		int varInt = 2147483647;
 		System.out.println("The int value is: " + varInt);
 		
-		int newVarInt = 214_748_3647;
+		int newVarInt = 2147483647;
 		System.out.println("The new int value is: " + newVarInt);
 		
-		int a = 1_555, b = 1;
+		int a = 1555, b = 1;
 		
 		System.out.println();
 		System.out.format("%d + %d = %d", a, b, a+b);
