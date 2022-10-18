@@ -8,7 +8,7 @@ public class ArrayListListOfObjects {
 	public static void main(String[] args) {
 		 
         // Declaring ArrayList
-        List<Book> listOfBooks =new ArrayList<>();
+        List<Book> listOfBooks =new ArrayList<Book>();
  
         Book javaInAction = new Book("Java in action", "mary public",
                 "Everest publishers", new BigDecimal("600"));
