@@ -33,6 +33,21 @@ public class AssignmentOperators {
 		System.out.println("\nAfter updates to the floats:");
 		System.out.format("varFloat1 = %f \tvarFloat2 = %f", varFloat1, varFloat2);
 
+		long varLong1 = 10l, varLong2 = 5l;
+		System.out.format("\nvarLong1 = %d \tvarLong2 = %d", varLong1, varLong2);
+
+		varLong1 *= varLong2;
+		System.out.println("\nAfter Multiplication");
+		System.out.format("varLong1 = %d \tvarLong2 = %d", varLong1, varLong2);
+
+		double varDouble1 = 20.0, varDouble2 = 8.0;
+		System.out.format("\n\nvarDouble1 = %f \tvarDouble2 = %f", varDouble1, varDouble2);
+
+		varDouble1 /= varDouble2;
+
+		System.out.println("\nAfter Division");
+		System.out.format("varDouble1 = %.2f \tvarDouble2 = %.2f", varDouble1, varDouble2);
+
 	}
 
 }
